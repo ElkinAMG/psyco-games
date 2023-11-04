@@ -1,0 +1,21 @@
+{
+  "name": "psy-minigames",
+  "version": "1.0.0",
+  "description": "Minigames for treating childrens life and help them to have a better understanding of life.",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config ./webpack.config.js --mode production",
+    "dev": "webpack serve --open"
+  },
+  "author": "Elkin Mejia",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
+    "html-webpack-plugin": "^5.5.3",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0"
+  }
+}
