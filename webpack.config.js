@@ -2,6 +2,8 @@ const path = require("path");
 
 // Plugins
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env, argv) => {
   config = {
@@ -31,6 +33,10 @@ module.exports = (env, argv) => {
             ],
           },
         },
+        {
+          test: /\.css$/i,
+          use: [MiniCssExtractPlugin.loader, "css-loader"],
+        },
       ],
     },
     plugins: [
@@ -38,6 +44,11 @@ module.exports = (env, argv) => {
         filename: "index.html",
         template: "public/index.html",
         hash: true,
+        inject: true,
+      }),
+      new MiniCssExtractPlugin({ filename: "assets/[name].css" }),
+      new CopyWebpackPlugin({
+        patterns: [{ from: "./src/utils", to: "avatar-utils" }],
       }),
     ],
     resolve: {
