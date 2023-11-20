@@ -1,4 +1,5 @@
 const path = require("path");
+const fs = require("fs");
 
 // Plugins
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -8,7 +9,17 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = (env, argv) => {
   config = {
     mode: "none",
-    entry: path.join(__dirname, "src", "index"),
+    entry: {
+      user: path.join(__dirname, "src", "User"),
+      main: {
+        dependOn: "user",
+        import: "./src/index",
+      },
+      gametest: {
+        dependOn: "user",
+        import: "./src/games/gametest/index.js",
+      },
+    },
     output: {
       path: path.join(__dirname, "build"),
       filename: "[name].js",
@@ -43,8 +54,12 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         filename: "index.html",
         template: "public/index.html",
-        hash: true,
-        inject: true,
+        chunks: ["main", "user"],
+      }),
+      new HtmlWebpackPlugin({
+        filename: "gametest.html",
+        template: "public/gametest.html",
+        chunks: ["gametest", "user"],
       }),
       new MiniCssExtractPlugin({ filename: "assets/[name].css" }),
       new CopyWebpackPlugin({

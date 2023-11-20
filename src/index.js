@@ -5,9 +5,6 @@ const User = require("./User");
 const initialModal = new bootstrap.Modal("#initialModal");
 initialModal.show();
 
-const initialForm = document.getElementById("initialFormUser");
-const submitButton = document.getElementById("initialFormButton");
-
 const userInput = {};
 
 /**
@@ -15,11 +12,22 @@ const userInput = {};
  */
 let user;
 
-initialForm.onchange = (ev) => {
-  userInput[ev.target.name] = ev.target.value;
-};
+$(function () {
+  const user = new User();
+  user.clearSession();
+});
 
-submitButton.onclick = (_ev) => {
+$("#initialFormUser").change(function (ev) {
+  userInput[ev.target.name] = ev.target.value;
+});
+
+$("#initialFormButton").click(function () {
   user = new User(userInput?.name, userInput?.age, userInput?.genre);
   initialModal.hide();
-};
+});
+
+$("#continue").click(function () {
+  user.createAvatar().then(() => {
+    window.location.href = "gametest.html";
+  });
+});
