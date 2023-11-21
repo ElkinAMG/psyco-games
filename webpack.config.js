@@ -1,5 +1,4 @@
 const path = require("path");
-const fs = require("fs");
 
 // Plugins
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -9,15 +8,16 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = (env, argv) => {
   config = {
     mode: "none",
+    // Agregar los script que se están utilizando siguiendo el mismo modelo de 'main'.
     entry: {
       user: path.join(__dirname, "src", "User"),
       main: {
         dependOn: "user",
         import: "./src/index",
       },
-      gametest: {
+      questions: {
         dependOn: "user",
-        import: "./src/games/gametest/index.js",
+        import: "./src/games/questions",
       },
     },
     output: {
@@ -50,6 +50,7 @@ module.exports = (env, argv) => {
         },
       ],
     },
+    // Agregar las páginas utilizando una nueva instancia de HtmlWebpackPlugin.
     plugins: [
       new HtmlWebpackPlugin({
         filename: "index.html",
@@ -57,13 +58,30 @@ module.exports = (env, argv) => {
         chunks: ["main", "user"],
       }),
       new HtmlWebpackPlugin({
-        filename: "gametest.html",
-        template: "public/gametest.html",
-        chunks: ["gametest", "user"],
+        filename: "questions.html",
+        template: "public/kids/questions.html",
+        chunks: ["questions", "user"],
       }),
-      new MiniCssExtractPlugin({ filename: "assets/[name].css" }),
+      new HtmlWebpackPlugin({
+        filename: "ahorcado.html",
+        template: "public/young/ahorcado.html",
+        inject: false, // Agregar inject cuando tengan onclick o eventos en html.
+      }),
+      new MiniCssExtractPlugin({ filename: "./assets/styles/[name].css" }),
       new CopyWebpackPlugin({
         patterns: [{ from: "./src/utils", to: "avatar-utils" }],
+      }),
+      new CopyWebpackPlugin({
+        patterns: [{ from: "./src/addons", to: "addons" }],
+      }),
+      new CopyWebpackPlugin({
+        patterns: [{ from: "./public/assets", to: "assets" }],
+      }),
+      new CopyWebpackPlugin({
+        patterns: [{ from: "./public/styles", to: "styles" }],
+      }),
+      new CopyWebpackPlugin({
+        patterns: [{ from: "./public/scripts", to: "." }],
       }),
     ],
     resolve: {

@@ -1,4 +1,4 @@
-import "../public/index.css"; //Esto es lo que queremos lograr
+import "../public/index.css";
 
 const User = require("./User");
 
@@ -28,6 +28,6 @@ $("#initialFormButton").click(function () {
 
 $("#continue").click(function () {
   user.createAvatar().then(() => {
-    window.location.href = "gametest.html";
+    window.location.href = "questions.html";
   });
 });

@@ -1,0 +1,42 @@
+.gris, body{
+    background-color: #fdfdfd;
+  }
+  
+  #imagen{
+    max-height: 45vh;  
+  }
+  .btn { 
+    padding: 0.25em 0.75em;
+  }
+  .btn:disabled {
+      background: #BBB;
+  }
+  .contador{
+     position: absolute;
+      left: 80%;
+      top: 250px;
+    background-color: rgba(199, 210, 226,0.4);
+    border-radius: 9px;
+    padding: 0.6em;
+    font-size: 1.3em;
+    font-weight:bold;
+    font-family: "Trebuchet MS", Helvetica, sans-serif
+  }
+  
+  @media (max-width: 768px) {
+  #imagen{
+    max-height: 35vh;  
+  }  
+  .btn { 
+    margin: 1%;
+   width: 12%;
+   padding: 0.5em;
+    border-radius: 150%;
+  }
+  .contador{
+    position:static;
+    font-size: 0.9em;
+    color: blue;
+    padding:10px;
+  }
+  }
