@@ -19,6 +19,18 @@ module.exports = (env, argv) => {
         dependOn: "user",
         import: "./src/games/questions",
       },
+      flappybird: {
+        dependOn: "user",
+        import: "./src/games/flappybird",
+      },
+      escaleras: {
+        dependOn: "user",
+        import: "./src/games/escaleras",
+      },
+      aquatics: {
+        dependOn: "user",
+        import: "./src/games/aquatics",
+      },
     },
     output: {
       path: path.join(__dirname, "build"),
@@ -57,10 +69,42 @@ module.exports = (env, argv) => {
         template: "public/index.html",
         chunks: ["main", "user"],
       }),
+      // KIDS
       new HtmlWebpackPlugin({
         filename: "questions.html",
         template: "public/kids/questions.html",
         chunks: ["questions", "user"],
+      }),
+      new HtmlWebpackPlugin({
+        filename: "aquatics.html",
+        template: "public/kids/aquatics.html",
+        chunks: ["aquatics", "user"]
+      }),
+      new HtmlWebpackPlugin({
+        filename: "memory.html",
+        template: "public/kids/memory-game.html",
+        inject: false,
+      }),
+      new HtmlWebpackPlugin({
+        filename: "maze.html",
+        template: "public/kids/maze.html",
+        inject: false,
+      }),
+      // YOUNG
+      new HtmlWebpackPlugin({
+        filename: "flappybird.html",
+        template: "public/young/flappybird.html",
+        chunks: ["flappybird", "user"],
+      }),
+      new HtmlWebpackPlugin({
+        filename: "escaleras.html",
+        template: "public/young/escaleras.html",
+        chunks: ["escaleras", "user"],
+      }),
+      new HtmlWebpackPlugin({
+        filename: "futbol.html",
+        template: "public/young/futbol.html",
+        inject: false,
       }),
       new HtmlWebpackPlugin({
         filename: "ahorcado.html",

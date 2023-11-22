@@ -1,0 +1,13 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-color: rgba(100, 155, 177, 0.79);
+    /* background-image: linear-gradient(62deg, #74b7fb 0%, rgba(194, 120, 41, 0.687)00%); */
+
+}
+
+#board {
+    background-image: url("./assets/flappybird/Summer3.png");
+    background-size: cover;
+    border: 3px solid rgb(37, 32, 32);
+}

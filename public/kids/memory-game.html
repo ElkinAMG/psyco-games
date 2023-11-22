@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/memory-game.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="game">
+        <div id="score-panel">
+          <ul class="stars">
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+          </ul>
+          <span class="moves">0</span> Movimientos
+          <div class="restart">
+            <i class="fa-solid fa-rotate-left"></i>
+          </div>
+        </div>
+        <ul class="deck"></ul>
+      </div>
+
+<!-----------------MODAAAAALL------------------->
+      <div class="pop-up">
+        <div class="modal" id="modal1">
+          <div class="content">
+            <h2 class="title">En este espacio vamos a identificar las emociones!</h2>
+            <p>¿Quieres aprender sobre las emociones con las que jugaste?</p>
+            <p>La alegría, La rabia, El miedo, La tristeza, El asco y muchos más! </p>
+            <div>
+                <iframe width="560" height="315" src="/assets/memory-game/Las emociones básicas para niños - Alegría, tristeza, miedo, ira, asco y sorpresa.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <a class="btn close-modal" data-modal="#modal1" href="#">Bye</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="results">
+        <div class="aciertos">Aciertos: 0</div>
+        <div class="seconds">Tienes 40 segundos</div>
+        <div class="learn">
+          <button class="boton-learn">
+            <a href="#" class="a open-modal" data-modal="#modal1">Click Aquí!</a>
+        </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('myVideo');
+        video.autoplay = false;
+    });
+      $(".modal").each(function () {
+        $(this).wrap('<div class="overlay"></div>');
+      });
+
+      $(".open-modal").on("click", function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation;
+
+        var $this = $(this),
+          modal = $($this).data("modal");
+
+        $(modal).parents(".overlay").addClass("open");
+        setTimeout(function () {
+          $(modal).addClass("open");
+        }, 350);
+
+        $(document).on("click", function (e) {
+          var target = $(e.target);
+
+          if (target.hasClass("overlay")) {
+            target.find(".modal").each(function () {
+              $(this).removeClass("open");
+            });
+            setTimeout(function () {
+              target.removeClass("open");
+            }, 350);
+          }
+        });
+      });
+
+      $(".close-modal").on("click", function (e) {
+        e.preventDefault();
+        e.stopImmediatePropagation;
+
+        var $this = $(this),
+          modal = $($this).data("modal");
+
+        $(modal).removeClass("open");
+        setTimeout(function () {
+          $(modal).parents(".overlay").removeClass("open");
+        }, 350);
+      });
+    </script>
+    <script src="memory-game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
