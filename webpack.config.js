@@ -69,6 +69,11 @@ module.exports = (env, argv) => {
         template: "public/index.html",
         chunks: ["main", "user"],
       }),
+      new HtmlWebpackPlugin({
+        filename: "mapa.html",
+        template: "public/mapa.html",
+        inject: false,
+      }),
       // KIDS
       new HtmlWebpackPlugin({
         filename: "questions.html",
@@ -111,6 +116,17 @@ module.exports = (env, argv) => {
         template: "public/young/ahorcado.html",
         inject: false, // Agregar inject cuando tengan onclick o eventos en html.
       }),
+      new HtmlWebpackPlugin({
+        filename: "snake.html",
+        template: "public/kids/snake.html",
+        inject: false, 
+      }),
+      new HtmlWebpackPlugin({
+        filename: "dimensiones.html",
+        template: "public/kids/dimensiones.html",
+        inject: false, 
+      }),
+
       new MiniCssExtractPlugin({ filename: "./assets/styles/[name].css" }),
       new CopyWebpackPlugin({
         patterns: [{ from: "./src/utils", to: "avatar-utils" }],

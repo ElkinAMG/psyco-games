@@ -28,6 +28,6 @@ $("#initialFormButton").click(function () {
 
 $("#continue").click(function () {
   user.createAvatar().then(() => {
-    window.location.href = "questions.html";
+    window.location.replace ("mapa.html") 
   });
 });
