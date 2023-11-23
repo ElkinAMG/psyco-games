@@ -20,7 +20,7 @@ class User {
     this.#genre = genre;
     this.#sessionKey = sessionKey;
     localStorage.setItem(
-      sessionKey,
+      "user",
       JSON.stringify({
         name: this.#name,
         age: this.#age,
@@ -35,14 +35,14 @@ class User {
   }
 
   getSession() {
-    return JSON.parse(localStorage.getItem(this.#sessionKey));
+    return JSON.parse(localStorage.getItem("user"));
   }
 
   updateSession(keys) {
     const user = this.getSession();
     this.removeSession();
     localStorage.setItem(
-      this.#sessionKey,
+      "user",
       JSON.stringify({
         ...user,
         ...keys,
@@ -51,7 +51,7 @@ class User {
   }
 
   removeSession() {
-    localStorage.removeItem(this.#sessionKey);
+    localStorage.removeItem("user");
   }
 
   clearSession() {

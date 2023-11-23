@@ -1,3 +1,21 @@
+let genero = null;
+
+function switchPlayer(genre) {
+  var arqueroImg = $("#arqueroImg");
+
+  if (genero === "M") {
+    console.log("Arquero seleccionado: Hombre");
+    // Cambiar dinámicamente la imagen del arquero hombre
+    arqueroImg.attr("src", "./assets/futbol/portero2.png");
+  } else if (genero === "F") {
+    console.log("Arquero seleccionado: Mujer");
+    // Cambiar dinámicamente la imagen del arquero mujer
+    arqueroImg.attr("src", "./assets/futbol/portera.png");
+  } else {
+    console.log("Selección no válida");
+  }
+}
+
 $(document).ready(function () {
   $("#shemal,#yemeen,#nos")
     .fadeOut(200)
@@ -7,6 +25,10 @@ $(document).ready(function () {
     .css("background-color", "rgba(255,0,0,0.7)");
 
   $("#shemal,#yemeen,#nos").css("cursor", "pointer");
+
+  genero = JSON.parse(localStorage.getItem("user")).genre;
+
+  switchPlayer(genero);
 });
 
 function mostrarArquero() {
@@ -15,11 +37,11 @@ function mostrarArquero() {
   // Obtener la referencia al elemento img usando jQuery
   var arqueroImg = $("#arqueroImg");
 
-  if (genero === "hombre") {
+  if (genero === "M") {
     console.log("Arquero seleccionado: Hombre");
     // Cambiar dinámicamente la imagen del arquero hombre
     arqueroImg.attr("src", "./assets/futbol/portero2.png");
-  } else if (genero === "mujer") {
+  } else if (genero === "F") {
     console.log("Arquero seleccionado: Mujer");
     // Cambiar dinámicamente la imagen del arquero mujer
     arqueroImg.attr("src", "./assets/futbol/portera.png");
@@ -39,13 +61,10 @@ function mostrarAlertaTiros() {
   var goals = parseInt($("#goals").text(), 10);
 
   if (tiros === maxTiros) {
-    if (goals <= 14 && goals>=10) {
+    if (goals <= 14 && goals >= 10) {
       Swal.fire({
         title:
-          "Estuviste cerca, anotaste " +
-          goals +
-          " de un máximo de " +
-          maxTiros,
+          "Estuviste cerca, anotaste " + goals + " de un máximo de " + maxTiros,
         icon: "error",
         showConfirmButton: false,
         timer: 4000,
@@ -94,10 +113,7 @@ function mostrarAlertaTiros() {
     } else if (goals <= 7) {
       Swal.fire({
         title:
-          "Mala suerte, solo anotaste" +
-          goals +
-          " de un máximo de " +
-          maxTiros,
+          "Mala suerte, solo anotaste" + goals + " de un máximo de " + maxTiros,
         icon: "error",
         showConfirmButton: false,
         timer: 4000,
@@ -274,7 +290,6 @@ function playAgain() {
     $("#tiros").text(tiros);
     $("#goals").text(goals);
     $("#again").text("Click aquí para tirar otro!");
-
   } else {
     // Continúa con la lógica actual
     $("#kora").animate({ top: "80%", left: "47%" }, 100);
