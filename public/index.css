@@ -11,13 +11,12 @@ body {
   height: 100%;
   overflow: hidden;
   background: radial-gradient(#9C27B0, #2196F3);
-  
 }
 
 #avatar svg {
   position: absolute;
-  top: 0;
-  left: 30%;
+  top: 20px;
+  left: 35%;
   width: 500px;
   height: 500px;
   border-top: 1px solid #707070;
@@ -30,8 +29,8 @@ body {
 
 #footer {
   position: absolute;
-  top: 500px;
-  left: 30%;
+  top: 550px;
+  left: 35%;
   width: 500px;
   height: 150px;
   border-top: 2px solid white;

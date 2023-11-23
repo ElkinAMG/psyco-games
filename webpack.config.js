@@ -31,6 +31,10 @@ module.exports = (env, argv) => {
         dependOn: "user",
         import: "./src/games/aquatics",
       },
+      2048: {
+        dependOn: "user",
+        import: "./src/games/2048/index",
+      },
     },
     output: {
       path: path.join(__dirname, "build"),
@@ -83,7 +87,7 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         filename: "aquatics.html",
         template: "public/kids/aquatics.html",
-        chunks: ["aquatics", "user"]
+        chunks: ["aquatics", "user"],
       }),
       new HtmlWebpackPlugin({
         filename: "memory-game.html",
@@ -96,6 +100,11 @@ module.exports = (env, argv) => {
         inject: false,
       }),
       // YOUNG
+      new HtmlWebpackPlugin({
+        filename: "2048.html",
+        template: "public/young/2048.html",
+        chunks: ["2048", "user"],
+      }),
       new HtmlWebpackPlugin({
         filename: "avioncito.html",
         template: "public/young/avioncito.html",
@@ -119,12 +128,12 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         filename: "snake.html",
         template: "public/kids/snake.html",
-        inject: false, 
+        inject: false,
       }),
       new HtmlWebpackPlugin({
         filename: "dimensiones.html",
         template: "public/kids/dimensiones.html",
-        inject: false, 
+        inject: false,
       }),
 
       new MiniCssExtractPlugin({ filename: "./assets/styles/[name].css" }),
