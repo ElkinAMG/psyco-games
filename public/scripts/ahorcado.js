@@ -58,8 +58,6 @@ for (var i = 0; i < arrayp.length; i++) {
   container.innerHTML = solucion.join(" ");
 }
 
-console.log(indice);
-
 function obtenerIndiceAleatorio() {
   var nuevoIndice;
   do {
@@ -88,63 +86,49 @@ function enviado(tecla) {
       if (terminado == -1) {
         lanzarConfeti();
         container.innerHTML +=
-          "<br>Bien hecho!!!! <br> Recuerda que cada animal cuenta con  caracteristicas unicas <br>Al igual que tú y yo :), dale al boton de aprender sobre para descrubir más! ";
+          "<br>¡Bien hecho! <br> Recuerda, cada animal cuenta con características únicas.<br>Al igual que tú y yo :), ¡dale al botón de aprender más para descubrir más!";
 
         finalGanado = true;
         //reseteo el array para validar la palabra
         let animal = solucion.join("");
-        console.log(animal);
         switch (animal) {
           case "tigre":
-            console.log("La variable es igual a 'tigre'");
             tigreModal.style.display = "block";
             break;
           case "zorro":
-            console.log("La variable es igual a 'zorro'");
             zorroModal.style.display = "block";
             break;
           case "cocodrilo":
-            console.log("La variable es igual a 'cocodrilo'");
             cocodriloModal.style.display = "block";
             break;
           case "panda":
-            console.log("La variable es igual a 'panda'");
             pandaModal.style.display = "block";
             break;
           case "jirafa":
-            console.log("La variable es igual a 'jirafa'");
             jirafaModal.style.display = "block";
             break;
           case "delfin":
-            console.log("La variable es igual a 'delfin'");
             delfinModal.style.display = "block";
             break;
           case "perro":
-            console.log("La variable es igual a 'perro'");
             perroModal.style.display = "block";
             break;
           case "gato":
-            console.log("La variable es igual a 'gato'");
             gatoModal.style.display = "block";
             break;
           case "caballo":
-            console.log("La variable es igual a 'caballo'");
             caballoModal.style.display = "block";
             break;
           case "hamster":
-            console.log("La variable es igual a 'hamster'");
             hamsterModal.style.display = "block";
             break;
           case "conejo":
-            console.log("La variable es igual a 'conejo'");
             conejoModal.style.display = "block";
             break;
           case "cobaya":
-            console.log("La variable es igual a 'cobaya'");
             cobayaModal.style.display = "block";
             break;
           case "tortuga":
-            console.log("La variable es igual a 'tortuga'");
             tortugaModal.style.display = "block";
             break;
         }
@@ -189,7 +173,7 @@ function enviado(tecla) {
 }
 
 function muestraboton() {
-  return '<button id="restart-game" type="button" class="btn btn-primary">Jugar otra vez</button> ';
+  return '<button id="restart-game" type="button" class="btn btn-primary" onclick="reiniciar()">Jugar otra vez</button> ';
 }
 
 function reiniciar() {

@@ -155,13 +155,13 @@ $("#btn1").click(() => {
 });
 
 $("#btn2").click(() => {
-  oprimir_btn(0);
+  oprimir_btn(1); 
 });
 
 $("#btn3").click(() => {
-  oprimir_btn(0);
+  oprimir_btn(2); 
 });
 
 $("#btn4").click(() => {
-  oprimir_btn(0);
+  oprimir_btn(3); 
 });

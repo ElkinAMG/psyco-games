@@ -1,4 +1,4 @@
-import "../../public/flappybird.css";
+import "../../public/avioncito.css";
 
 let isWindowFocused = true;
 
@@ -55,19 +55,19 @@ window.addEventListener("blur", function () {
 
 function loadImages() {
   birdImg = new Image();
-  birdImg.src = "./assets/flappybird/avion.png";
+  birdImg.src = "./assets/avioncito/avion.png";
   birdImg.onload = function () {
     context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
   };
 
   topPipeImg = new Image();
-  topPipeImg.src = "./assets/flappybird/toppipe.png";
+  topPipeImg.src = "./assets/avioncito/toppipe.png";
   topPipeImg.onload = function () {
     // Aquí puedes agregar lógica adicional si es necesario
   };
 
   bottomPipeImg = new Image();
-  bottomPipeImg.src = "./assets/flappybird/bottompipe.png";
+  bottomPipeImg.src = "./assets/avioncito/bottompipe.png";
   bottomPipeImg.onload = function () {
     // Aquí puedes agregar lógica adicional si es necesario
   };

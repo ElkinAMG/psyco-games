@@ -342,7 +342,7 @@ Math.minmax = (value, limit) => {
           <p>Modo difícil, evita caer en los huecos. <br> ¿Quieres volver al fácil? Presiona E</p>`;
     } else {
       noteElement.innerHTML = `Clicka el joystick para iniciar!
-          <p>Mueve todas las circulos al centro. <br> ¿Preparado para el modo difícil? Presiona H</p>`;
+          <p>Mueve todas los circulos al centro. <br> ¿Preparado para el modo difícil? Presiona H</p>`;
     }
     noteElement.style.opacity = 1;
   

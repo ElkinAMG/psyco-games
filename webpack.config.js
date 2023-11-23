@@ -19,9 +19,9 @@ module.exports = (env, argv) => {
         dependOn: "user",
         import: "./src/games/questions",
       },
-      flappybird: {
+      avioncito: {
         dependOn: "user",
-        import: "./src/games/flappybird",
+        import: "./src/games/avioncito",
       },
       escaleras: {
         dependOn: "user",
@@ -86,7 +86,7 @@ module.exports = (env, argv) => {
         chunks: ["aquatics", "user"]
       }),
       new HtmlWebpackPlugin({
-        filename: "memory.html",
+        filename: "memory-game.html",
         template: "public/kids/memory-game.html",
         inject: false,
       }),
@@ -97,9 +97,9 @@ module.exports = (env, argv) => {
       }),
       // YOUNG
       new HtmlWebpackPlugin({
-        filename: "flappybird.html",
-        template: "public/young/flappybird.html",
-        chunks: ["flappybird", "user"],
+        filename: "avioncito.html",
+        template: "public/young/avioncito.html",
+        chunks: ["avioncito", "user"],
       }),
       new HtmlWebpackPlugin({
         filename: "escaleras.html",
