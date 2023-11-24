@@ -243,7 +243,7 @@ function dosyemeen() {
   //Function when click right
   if (test == 0) {
     goalkeeper = btn_click(); //RANDOM FUNCTION of the goal keeper
-    $("#kora").animate({ top: "37%", left: "+=250px" }, 100);
+    $("#kora").animate({ top: "37%", left: "+=280px" }, 100);
     test = 1;
     $("#shoot").css("display", "none");
     $("#again").css("display", "block");
@@ -257,7 +257,7 @@ function dosshemal() {
   //Function when click left
   if (test == 0) {
     goalkeeper = btn_click(); //RANDOM FUNCTION Bta3et el 7ares
-    $("#kora").animate({ top: "37%", left: "35%" }, 100);
+    $("#kora").animate({ top: "37%", left: "34%" }, 100);
     test = 1;
     $("#shoot").css("display", "none");
     $("#again").css("display", "block");
@@ -294,7 +294,7 @@ function playAgain() {
     // Continúa con la lógica actual
     $("#kora").animate({ top: "80%", left: "47%" }, 100);
     $("#ares").css({ transform: "rotate(0)" }, 100);
-    $("#ares").animate({ top: "37%", left: "45%" }, 100);
+    $("#ares").animate({ top: "40%", left: "45%" }, 100);
     $("#again").css("display", "none");
     $("#shoot").css("display", "block");
     test = 0;
@@ -304,7 +304,7 @@ function playAgain() {
 function mover() {
   //The goal keeper goes right
   $("#ares").css({ transform: "rotate(25deg)" }, 100);
-  $("#ares").animate({ top: "-=50px", left: "830px" }, 100);
+  $("#ares").animate({ top: "-=50px", left: "980px" }, 100);
 }
 function movel() {
   //The goal keeper goes left
