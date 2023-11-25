@@ -9,13 +9,17 @@
   </head>
   <body>
     <div class="container">
-      <div
+      <div class="container"
         style="
-          width: 100%;
+          width: 800px;
           display: flex;
           align-items: center;
           justify-content: center;
           flex-direction: column;
+          padding-top: 10px;
+          padding-bottom: 15px;
+          background-color: rgba(66, 66, 66, 0.9);
+          border-radius: 20px;
         "
       >
         <h1 style="text-align: center">
@@ -25,7 +29,7 @@
         <div class="info-footer">
           <p>
             Explora nuestro mapa interactivo de Colombia y descubre lugares
-            icónicos de Barranquilla como La aleta del tiburón, el estadio
+            icónicos del Atlántico como La aleta del tiburón, el estadio
             Metropolitano, la venta al mundo, el zoológico de Barranquilla, el
             estadio de béisbol Edgar Rentería, el malecón Puerta de Oro, el
             volcán del totumo y muchos más!
@@ -138,22 +142,28 @@
         <script>
           document.addEventListener("DOMContentLoaded", function () {
             var icons = document.querySelectorAll(".icon");
-
+        
             icons.forEach(function (icon) {
               icon.addEventListener("click", toggleTooltip);
             });
-
+        
             function toggleTooltip(event) {
               event.stopPropagation(); // Evita que el clic en el icono propague al documento
-
+        
+              var tooltip = event.currentTarget.querySelector(".tooltip");
+        
+              if (tooltip.style.opacity === "0") {
+                // Si el tooltip está oculto, no permitir que se haga clic en el enlace
+                event.preventDefault();
+              }
+        
               icons.forEach(function (icon) {
                 icon.querySelector(".tooltip").style.opacity = 0;
               });
-
-              var tooltip = event.currentTarget.querySelector(".tooltip");
+        
               tooltip.style.opacity = tooltip.style.opacity === "0" ? "1" : "0";
             }
-
+        
             // Agrega un evento clic al documento para ocultar los tooltips cuando se hace clic fuera de ellos
             document.addEventListener("click", function (event) {
               icons.forEach(function (icon) {
@@ -161,17 +171,22 @@
               });
             });
           });
-        </script>
+        </script>        
       </div>
 
-      <div
-        style="
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-        "
+      <div class="container"
+      style="
+        width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        background-color: rgba(66, 66, 66, 0.9);
+        border-radius: 20px;
+        color: white;
+      "
       >
         <h1
           style="
@@ -179,7 +194,7 @@
             font-size: 2.3em;
             font-weight: bold;
             text-align: center;
-            color: black;
+            
           "
         >
           Clickea los puntos de interés de color azul<br />que están por en el
@@ -189,7 +204,7 @@
           style="
             text-align: center;
             max-width: 800px;
-            color: black;
+            
             margin-top: 20px;
           "
         >

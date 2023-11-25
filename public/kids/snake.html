@@ -6,11 +6,39 @@
      <link rel="stylesheet" href="../styles/snake.css">
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.1/dist/confetti.browser.min.js"></script>
+     <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
 
     <title>Serpientes y Escaleras</title>
 </head>
 <body>
+    <style>
+        .buttons a {
+          position: absolute;
+          text-decoration: none;
+          font-size: 28px;
+          width: 60px;
+          height: 60px;
+          line-height: 60px;
+          text-align: center;
+          background: #314652;
+          color: #f1f1f1;
+          border-radius: 50%;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          transition: all 0.4s ease-in-out;
+          top: 30px;
+          left: 30px;
+        }
+        .buttons a:hover {
+          transform: scale(1.2);
+        }
+      </style>
+      <div class="buttons">
+        <a href="/mapa.html" class="fa fa-map"></a>
+      </div>
     <div class="wrapper">
         <h1>Turno: <span class="playerName"></span></h1>
         <h2 class="message">&nbsp;</h2> 

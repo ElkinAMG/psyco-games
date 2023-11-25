@@ -10,8 +10,33 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="styles/memory-game.css" />
+    
   </head>
+  <style>
+    .buttons a {
+      position: absolute;
+      text-decoration: none;
+      font-size: 28px;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      background: #314652;
+      color: #f1f1f1;
+      border-radius: 50%;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      transition: all 0.4s ease-in-out;
+      top: 30px;
+      left: 30px;
+    }
+    .buttons a:hover {
+      transform: scale(1.2);
+    }
+  </style>
   <body>
+    <div class="buttons">
+      <a href="/mapa.html" class="fa fa-map"></a>
+    </div>
     <div class="container">
       <div class="game">
         <div id="score-panel">
@@ -35,11 +60,25 @@
             <h2 class="title">En este espacio vamos a identificar las emociones!</h2>
             <p>¿Quieres aprender sobre las emociones antes de jugar?</p>
             <p>La alegría, La rabia, El miedo, La tristeza, El asco y muchos más! </p>
-            <div>
-                <iframe width="560" height="315" src="/assets/memory-game/Las emociones básicas para niños - Alegría, tristeza, miedo, ira, asco y sorpresa.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <a class="btn close-modal" data-modal="#modal1" href="#">Bye</a>
+            
+            <div id="player"></div>
+
+              <script src="https://www.youtube.com/iframe_api"></script>
+              <script>
+                  // Esta función se llama cuando la API de YouTube está lista
+                  function onYouTubeIframeAPIReady() {
+                      var player = new YT.Player('player', {
+                          height: '315',
+                          width: '560',
+                          videoId: 'qBZSlGo4N1k',
+                          playerVars: {
+                              'playsinline': 1
+                          }
+                      });
+                  }
+              </script>
           </div>
+          <a class="btn close-modal" data-modal="#modal1" href="#">Bye</a>
         </div>
       </div>
 

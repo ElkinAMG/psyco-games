@@ -4,10 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>2048</title>
   </head>
 
   <body>
+    <style>
+      .buttons a {
+        position: absolute;
+        text-decoration: none;
+        font-size: 28px;
+        width: 80px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        background: #314652;
+        color: #f1f1f1;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        transition: all 0.4s ease-in-out;
+        top: 30px;
+        left: 30px;
+      }
+      .buttons a:hover {
+        transform: scale(1.2);
+      }
+    </style>
+    <div class="buttons">
+      <a href="/mapa.html">Mapa</a>
+    </div>
     <div class="info">
       <h1 style="color: yellow">2048:</h1>
       <p>

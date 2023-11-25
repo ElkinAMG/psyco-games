@@ -20,6 +20,10 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
 
   <body
@@ -39,7 +43,31 @@
       ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     "
   >
+  <style>
+    .buttons a {
+      position: absolute;
+      text-decoration: none;
+      font-size: 28px;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      background: #051822;
+      color: #f1f1f1;
+      border-radius: 50%;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      transition: all 0.4s ease-in-out;
+      top: 240px;
+      left: 10px;
+    }
+    .buttons a:hover {
+      transform: scale(1.2);
+    }
+  </style>
     <div class="containe">
+      <div class="buttons">
+        <a href="/mapa.html" class="fa fa-map"></a>
+      </div>
       <div id="mal3ab">
         <div id="ablshemal">
           <div id="shemal" onclick="dosshemal(); "></div>
@@ -59,7 +87,7 @@
         </div>
       </div>
       <br />
-      <div class="infoMain">
+      <div class="infoMain ms-3">
         <h1 id="shoot" class="text-white">Abre las Instrucciones primero!</h1>
         <h1 id="again" class="text-warning" onclick="playAgain();">
           Click aquí para tirar otro!
@@ -71,7 +99,7 @@
       </div>
       <button
         type="button"
-        class="btn btn-light btn-lg"
+        class="btn btn-light btn-lg ms-3"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
