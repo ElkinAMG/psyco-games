@@ -114,7 +114,7 @@ function update() {
 
     // Mensaje de bienvenida con salto de línea
     const welcomeMessage =
-      "Bienvenido😁\nUsa espacio varias veces\no Tecla hacia arriba\n Para Jugar";
+      "¡Bienvenido😁!\nUsa espacio varias veces\no Tecla hacia arriba\n Para Jugar";
 
     // Divide el mensaje en líneas y dibújalas
     const lines = welcomeMessage.split("\n");

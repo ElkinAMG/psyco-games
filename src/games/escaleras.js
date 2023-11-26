@@ -241,10 +241,22 @@ function animate(timestamp) {
             setTimeout(() => (perfectElement.style.opacity = 0), 1000);
           }
 
-          if (score % 10 === 0) {
+          if (
+            (score % 10 === 0 ||
+            score % 11 === 0) ||
+            (score % 22 === 0 ||
+            score % 33 === 0) ||
+            (score % 44 === 0 ||
+            score % 55 === 0) ||
+            (score % 66 === 0 ||
+            score % 77 === 0) ||
+            (score % 88 === 0 ||
+            score % 99 === 0) ||
+            score === 100
+          ) {
             // Llama a la función para lanzar confeti
             lanzarConfeti();
-          }
+          }          
 
           generatePlatform();
           generateTree();

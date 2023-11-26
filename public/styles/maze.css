@@ -41,7 +41,7 @@ body {
 }
 
 #mazeContainer #mazeCanvas {
-    margin: 0;
+    margin: 25px;
     display: block;
     border: solid 2px black;
     height: 440px;

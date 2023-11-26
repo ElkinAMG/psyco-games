@@ -113,7 +113,7 @@ function mostrarAlertaTiros() {
     } else if (goals <= 7) {
       Swal.fire({
         title:
-          "Mala suerte, solo anotaste" + goals + " de un máximo de " + maxTiros,
+          "Mala suerte, solo anotaste " + goals + " de un máximo de " + maxTiros,
         icon: "error",
         showConfirmButton: false,
         timer: 4000,
@@ -243,7 +243,7 @@ function dosyemeen() {
   //Function when click right
   if (test == 0) {
     goalkeeper = btn_click(); //RANDOM FUNCTION of the goal keeper
-    $("#kora").animate({ top: "37%", left: "+=280px" }, 100);
+    $("#kora").animate({ top: "37%", left: "+=250px" }, 100);
     test = 1;
     $("#shoot").css("display", "none");
     $("#again").css("display", "block");
@@ -302,19 +302,19 @@ function playAgain() {
 }
 
 function mover() {
-  //The goal keeper goes right
+  //The goalkeeper goes right
   $("#ares").css({ transform: "rotate(25deg)" }, 100);
-  $("#ares").animate({ top: "-=50px", left: "980px" }, 100);
+  $("#ares").animate({ top: "-=50px", left: "930px" }, 100);
 }
 function movel() {
-  //The goal keeper goes left
+  //The goalkeeper goes left
   $("#ares").css({ transform: "rotate(-25deg)" }, 100);
   $("#ares").animate({ top: "-=50px", left: "-=180px" }, 100);
 }
 
 function movec() {
   //The goal keeper goes center
-  $("#ares").animate({ top: "-=50px" }, 100);
+  $("#ares").animate({ top: "-=30px" }, 100);
 }
 
 // Put the 3 functions of the goal keeper in the array of functions

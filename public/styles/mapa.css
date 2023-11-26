@@ -140,6 +140,9 @@ body {
   left: calc(50% - 12.5em);
 }
 
+.laberinto .tooltip{
+  left: calc(50% - 12.5em);
+}
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 2em;

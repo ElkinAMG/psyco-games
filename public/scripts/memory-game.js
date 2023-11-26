@@ -57,16 +57,25 @@ function setRating(moves) {
 	return { score: rating };
 };
 
+function detenerTemporizador() {
+    clearInterval(temporizador);
+}
+
+
 // End Game
 function endGame(moves, score) {
-	clearInterval(temporizador);
+
+	detenerTemporizador()
 	Swal.fire({
 		title: 'Felicidades! Eres impresionante!',
-		text: 'Con ' + moves + ' movimientos y ' + score + ' Estrellas.\nVe a donde dice Click aquí!',
+		text: 'Con ' + moves + ' movimientos y ' + score + ' Estrellas.',
 		icon: 'success',
 	}).then(function(isConfirm) {
 		if (isConfirm) {
+			tiempoRestante= 40;
+			actualizarTiempo();
 			initGame();
+			
 		}
 	})
 }
@@ -96,7 +105,7 @@ function iniciarTemporizador() {
             Swal.fire({
 				icon: "error",
 				title: "Oops...",
-				text: "Tiempo acabado!"
+				text: "¡Tiempo acabado!"
 			  });
             reiniciarJuego();
         }
@@ -107,7 +116,7 @@ function reiniciarJuego() {
     aciertos = 0;
     tiempoRestante = 40;
     $('.aciertos').text('Aciertos: ' + aciertos);
-    actualizarTiempo();
+    iniciarTemporizador();
     clearInterval(temporizador);  // Detener el temporizador
     initGame();  // Función para reiniciar el juego
 }
