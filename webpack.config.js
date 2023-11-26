@@ -135,6 +135,11 @@ module.exports = (env, argv) => {
         template: "public/kids/dimensiones.html",
         inject: false,
       }),
+      new HtmlWebpackPlugin({
+        filename: "volcan.html",
+        template: "public/kids/volcan.html",
+        inject: false,
+      }),
 
       new MiniCssExtractPlugin({ filename: "./assets/styles/[name].css" }),
       new CopyWebpackPlugin({
