@@ -64,7 +64,7 @@ function drop(event) {
       text: "¡En muchas ocasiones somos como ese volcán! Nos llenamos de rabia y solemos explotar, haciéndonos daño a nosotros mismos o a las personas que más amamos! El psicólogo(a) que te guía te dará una hoja, en donde encontraras el dibujo de un volcán, en la parte inferior del volcán cuéntanos aquellas cosas que te dan IRA y te hacen explotar y en la lava, escribe o dibuja como reaccionas generalmente ante esa IRA.",
       backdrop: `
           rgba(0,0,123,0.4)
-          url("/assets/volcan/star.gif")
+          url("./assets/volcan/star.gif")
           left top
           no-repeat
         `
@@ -77,7 +77,7 @@ function drop(event) {
         text: "¡Elige otra manera de calmar la lava, piensa mejor y encuentra la solución!",
         backdrop: `
           rgba(0,0,123,0.4)
-          url("/assets/volcan/rene.gif")
+          url("./assets/volcan/rene.gif")
           left top
           no-repeat
         `
@@ -95,7 +95,7 @@ function startCounter(duration, display, imageElement) {
     // Cambiar la imagen cada 5 segundos restantes
     if (timer % 4 === 0) {
       const imageNumber = timer / 4;
-      imageElement.src = `/assets/volcan/${imageNumber}.png`;
+      imageElement.src = `./assets/volcan/${imageNumber}.png`;
     }
 
     if (--timer < 0) {
@@ -107,17 +107,17 @@ function startCounter(duration, display, imageElement) {
         width: 600,
         padding: "3em",
         color: "white",
-        background: "rgba(0,0,0,0.8) url(/assets/volcan/1670.png)",
+        background: "rgba(0,0,0,0.8) url(./assets/volcan/1670.png)",
         imageWidth: 400,
         imageHeight: 200,
         backdrop: `
           rgba(0,0,123,0.4)
-          url("/assets/volcan/volcan.gif")
+          url("./assets/volcan/volcan.gif")
           right
           no-repeat
         `
       });
-      imageElement.src = `/assets/volcan/1.png`;
+      imageElement.src = `./assets/volcan/1.png`;
     }
   }, 1000);
 }

@@ -114,7 +114,7 @@ h2 {
 	position: absolute;
 	bottom: -30px;
 	left: -21px;
-	background-image: url("./assets/aquatics/hook.svg");
+	background-image: url("../assets/aquatics/hook.svg");
 }
 
 #line.zapped {
@@ -276,7 +276,7 @@ button#start-btn .arrow {
 .jellyfish {
 	width: 80px;
 	height: 100px;
-	background-image: url("./assets/aquatics/jellyfish.svg");
+	background-image: url("../assets/aquatics/jellyfish.svg");
 	background-size: contain;
 	position: absolute;
 	transition: left 0.1s linear, top 0.1s linear, opacity 1s linear;
@@ -288,7 +288,7 @@ button#start-btn .arrow {
 .shark {
 	width: 240px;
 	height: 128px;
-	background-image: url("./assets/aquatics/shark.svg");
+	background-image: url("../assets/aquatics/shark.svg");
 	background-size: contain;
 	background-repeat: no-repeat;
 	position: absolute;

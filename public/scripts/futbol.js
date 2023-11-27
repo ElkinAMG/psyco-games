@@ -10,7 +10,7 @@ function switchPlayer(genre) {
   } else if (genero === "F") {
     console.log("Arquero seleccionado: Mujer");
     // Cambiar dinámicamente la imagen del arquero mujer
-    arqueroImg.attr("src", "./assets/futbol/portera.png");
+    arqueroImg.attr("src", "./assets/futbol/Portera.png");
   } else {
     console.log("Selección no válida");
   }
@@ -44,7 +44,7 @@ function mostrarArquero() {
   } else if (genero === "F") {
     console.log("Arquero seleccionado: Mujer");
     // Cambiar dinámicamente la imagen del arquero mujer
-    arqueroImg.attr("src", "./assets/futbol/portera.png");
+    arqueroImg.attr("src", "./assets/futbol/Portera.png");
   } else {
     console.log("Selección no válida");
   }

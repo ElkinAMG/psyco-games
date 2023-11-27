@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url(./assets/fondo3.jpg);
+  background: url("../assets/fondo3.jpg");
   background-size: cover;
   background-position: center;
   /* background: linear-gradient(to bottom, #4e37ab 55%, lightgrey 45%); */
