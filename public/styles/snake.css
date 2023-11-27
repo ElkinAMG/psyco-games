@@ -50,7 +50,7 @@ body{
 
 
  canvas {
-	 background-image: url("./assets/snake/background.png");
+	 background-image: url("../assets/snake/background.png");
 	 background-size: cover;
 	 border: 5px solid black;
 	 border-radius: 7px;
