@@ -9,7 +9,7 @@ html {
 }
 
 body{
-	background: url(/assets/snake/background2.jpg);
+	background: url("./assets/snake/background2.jpg");
 	background-size: cover;
 	display: flex;
 	height: 100vh;
@@ -50,7 +50,7 @@ body{
 
 
  canvas {
-	 background-image: url("/assets/snake/background.png");
+	 background-image: url("./assets/snake/background.png");
 	 background-size: cover;
 	 border: 5px solid black;
 	 border-radius: 7px;
