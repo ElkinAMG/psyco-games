@@ -6,18 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <title>2048</title>
   </head>
 
   <body>
     <style>
+      body{
+        background-image: url("/assets/2048/back.jpg");
+        background-size: cover;
+      }
       .buttons a {
         position: absolute;
         text-decoration: none;
         font-size: 28px;
-        width: 80px;
+        width: 60px;
         height: 60px;
         line-height: 60px;
         text-align: center;
@@ -34,7 +38,7 @@
       }
     </style>
     <div class="buttons">
-      <a href="/mapa.html">Mapa</a>
+      <a href="/mapa.html" class="fa fa-map"></a>
     </div>
     <div class="info">
       <h1 style="color: yellow">2048:</h1>
