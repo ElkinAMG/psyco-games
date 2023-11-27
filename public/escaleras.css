@@ -27,7 +27,7 @@ body {
 
 
 .game-canvas {
-  background: url(./assets/escaleras/Summer2.png) center center no-repeat;
+  background: url("./assets/escaleras/Summer2.png") center center no-repeat;
   background-size: cover;
 }
 

@@ -105,12 +105,12 @@ window.onload = function () {
   function startGame() {
     //day = 4;
     //initialise sounds
-    blop = new sound("assets/aquatics/sfx/fish.mp3");
-    rareBlop = new sound("assets/aquatics/sfx/rare-fish.mp3");
-    trashSound = new sound("assets/aquatics/sfx/trash.mp3");
-    bzzt = new sound("assets/aquatics/sfx/bzzt.mp3");
-    bite = new sound("assets/aquatics/sfx/bite.mp3");
-    bgm = new sound("assets/aquatics/sfx/Bug_Catching.mp3");
+    blop = new sound("./assets/aquatics/sfx/fish.mp3");
+    rareBlop = new sound("./assets/aquatics/sfx/rare-fish.mp3");
+    trashSound = new sound("./assets/aquatics/sfx/trash.mp3");
+    bzzt = new sound("./assets/aquatics/sfx/bzzt.mp3");
+    bite = new sound("./assets/aquatics/sfx/bite.mp3");
+    bgm = new sound("./assets/aquatics/sfx/Bug_Catching.mp3");
     bgm.play();
     if (day === 0) {
       fishTracker = [0, 0, 0, 0, 0];
