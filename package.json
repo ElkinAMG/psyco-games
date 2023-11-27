@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "Minigames for treating childrens life and help them to have a better understanding of life.",
   "private": true,
+  "repository": {
+    "url": "git+https://github.com/ElkinAMG/psyco-games.git"
+  },
+  "homepage": "http://elkinamg.github.io/psyco-games",
   "scripts": {
-    "predeploy": "npm run build",
     "build": "webpack --config ./webpack.config.js --mode production",
-    "dev": "webpack serve --open"
+    "dev": "webpack serve --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Elkin Mejia",
   "license": "ISC",
@@ -16,6 +21,7 @@
     "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
+    "gh-pages": "^6.1.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "webpack": "^5.74.0",

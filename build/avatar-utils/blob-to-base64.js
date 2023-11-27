@@ -1,1 +1,0 @@
-const blobToData=e=>new Promise((o=>{const a=new FileReader;a.onloadend=()=>o(a.result),a.readAsDataURL(e)}));module.exports=blobToData;
