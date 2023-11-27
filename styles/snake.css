@@ -9,7 +9,7 @@ html {
 }
 
 body{
-	background: url("./assets/snake/background2.jpg");
+	background: url("../assets/snake/background2.jpg");
 	background-size: cover;
 	display: flex;
 	height: 100vh;
