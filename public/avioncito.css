@@ -7,7 +7,7 @@ body {
 }
 
 #board {
-    background-image: url("../assets/avioncito/Summer3.png");
+    background-image: url("./assets/avioncito/Summer3.png");
     background-size: cover;
     border: 3px solid rgb(37, 32, 32);
 }
