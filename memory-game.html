@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><script src="https://code.jquery.com/jquery-3.6.4.min.js"></script><link rel="icon" href="/assets/memory-game/icono.png"><title>Juego de memoria</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/><link rel="stylesheet" href="styles/memory-game.css"/></head><style>.buttons a {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><script src="https://code.jquery.com/jquery-3.6.4.min.js"></script><link rel="icon" href="./assets/memory-game/icono.png"><title>Juego de memoria</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/><link rel="stylesheet" href="./styles/memory-game.css"/></head><style>.buttons a {
       position: absolute;
       text-decoration: none;
       font-size: 28px;
@@ -16,7 +16,7 @@
     }
     .buttons a:hover {
       transform: scale(1.2);
-    }</style><body><div class="buttons"><a href="/mapa.html" class="fa fa-map"></a></div><div class="container"><div class="game"><div id="score-panel"><ul class="stars"><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li></ul><span class="moves">0</span> Movimientos<div class="restart"><i class="fa-solid fa-rotate-left"></i></div></div><ul class="deck"></ul></div><div class="pop-up"><div class="modal" id="modal1"><div class="content"><h2 class="title">¡En este espacio vamos a identificar las emociones!</h2><p>¿Quieres aprender sobre las emociones antes de jugar?</p><p>¡La alegría, La rabia, El miedo, La tristeza, El asco y muchos más!</p><div id="player"></div><script src="https://www.youtube.com/iframe_api"></script><script>// Esta función se llama cuando la API de YouTube está lista
+    }</style><body><div class="buttons"><a href="./mapa.html" class="fa fa-map"></a></div><div class="container"><div class="game"><div id="score-panel"><ul class="stars"><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li><li><i class="fa fa-star"></i></li></ul><span class="moves">0</span> Movimientos<div class="restart"><i class="fa-solid fa-rotate-left"></i></div></div><ul class="deck"></ul></div><div class="pop-up"><div class="modal" id="modal1"><div class="content"><h2 class="title">¡En este espacio vamos a identificar las emociones!</h2><p>¿Quieres aprender sobre las emociones antes de jugar?</p><p>¡La alegría, La rabia, El miedo, La tristeza, El asco y muchos más!</p><div id="player"></div><script src="https://www.youtube.com/iframe_api"></script><script>// Esta función se llama cuando la API de YouTube está lista
                   function onYouTubeIframeAPIReady() {
                       var player = new YT.Player('player', {
                           height: '315',
@@ -67,4 +67,4 @@
         setTimeout(function () {
           $(modal).parents(".overlay").removeClass("open");
         }, 350);
-      });</script><script src="memory-game.js"></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script></body></html>
+      });</script><script src="./memory-game.js"></script><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script></body></html>
