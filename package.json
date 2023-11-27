@@ -4,6 +4,7 @@
   "description": "Minigames for treating childrens life and help them to have a better understanding of life.",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
     "build": "webpack --config ./webpack.config.js --mode production",
     "dev": "webpack serve --open"
   },
